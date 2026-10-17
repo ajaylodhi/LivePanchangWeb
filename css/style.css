@@ -1,0 +1,685 @@
+/* ===================================================================
+   Live Panchang - One Page Scrolling Web Portal
+   Developed for: Rajmau App Studio
+   Theme: Royal Gold (#FFA000 / #D4AF37) & Pure Black (#0C0A09 / #000000)
+=================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #FFA000;         /* Deep Amber Gold */
+    --primary-dark: #E68A00;
+    --primary-light: #FFD54F;   /* Bright Gold */
+    --secondary: #D4AF37;       /* Metallic Royal Gold */
+    --secondary-dark: #B8860B;  /* Dark Goldenrod */
+    --dark-bg: #0C0A09;         /* Deep Warm Pure Black */
+    --body-bg: #FFFDF7;         /* Warm Soft White / Cream */
+    --card-bg: #FFFFFF;
+    --text-color: #121212;
+    --text-muted: #5D4037;
+    --border-color: #E5DECF;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--body-bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--secondary-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Separators */
+.separator {
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    margin: 15px auto 25px auto;
+    border-radius: 2px;
+}
+
+.separator-left {
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    margin: 15px 0 25px 0;
+    border-radius: 2px;
+}
+
+/* ===================================================================
+   HEADER & NAVIGATION BAR (FIXED RESPONSIVE STICKY)
+=================================================================== */
+#header {
+    background-color: var(--dark-bg);
+    border-bottom: 2px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.logo a {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo a span {
+    color: var(--primary);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #E5DECF;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #000000;
+    background-color: var(--primary);
+}
+
+.nav-download-btn {
+    background: linear-gradient(135deg, #FFA000 0%, #FFB300 100%) !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 10px rgba(255, 160, 0, 0.3);
+}
+
+.nav-download-btn:hover {
+    background: linear-gradient(135deg, #FFB300 0%, #FFD54F 100%) !important;
+    transform: translateY(-2px);
+}
+
+/* Mobile Toggle Hamburger Button */
+.mobile-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-size: 22px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-toggle:hover {
+    background: var(--primary);
+    color: #000000;
+}
+
+/* ===================================================================
+   HERO BANNER (FULL-WIDTH CELESTIAL NAKSHATRA ZODIAC CHART BACKGROUND)
+=================================================================== */
+.fh5co-hero {
+    background: linear-gradient(180deg, rgba(12, 10, 9, 0.82) 0%, rgba(0, 0, 0, 0.94) 100%), url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+    color: #ffffff;
+    padding: 170px 0 120px 0;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid var(--primary);
+    box-shadow: inset 0 -10px 30px rgba(0,0,0,0.6);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 160, 0, 0.18);
+    border: 1px solid var(--primary);
+    color: var(--primary-light);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(4px);
+}
+
+.banner-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.banner-content h1 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #ffffff;
+    letter-spacing: -1px;
+    text-shadow: 0 3px 15px rgba(0,0,0,0.9);
+}
+
+.banner-content h1 span {
+    color: var(--primary);
+}
+
+.banner-content .subtitle {
+    font-size: 24px;
+    color: var(--primary-light);
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.banner-content .tagline {
+    font-size: 18px;
+    color: #E5DECF;
+    margin-bottom: 38px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 36px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #FFA000 0%, #FFB300 100%);
+    color: #000000;
+    border: none;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, #FFB300 0%, #FFD54F 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 160, 0, 0.4);
+    color: #000000;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+/* ===================================================================
+   ENHANCED STAT COUNTER OVERLAY BAR (GLASS CARDS)
+=================================================================== */
+.counter-bar {
+    background: linear-gradient(135deg, rgba(12, 10, 9, 0.96) 0%, rgba(0, 0, 0, 0.98) 100%), url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+    color: #ffffff;
+    padding: 55px 0;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.counter-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 160, 0, 0.3);
+    border-radius: 14px;
+    padding: 25px 15px;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(255, 160, 0, 0.25);
+}
+
+.counter-icon {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.counter-item h3 {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--primary-light);
+    margin-bottom: 5px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.counter-item p {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #E5DECF;
+    margin: 0;
+}
+
+/* ===================================================================
+   SECTION HEADINGS & LAYOUTS
+=================================================================== */
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-gray {
+    background-color: #F8F5EE;
+}
+
+.head-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.head-title h2 {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.head-title p {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* ===================================================================
+   ABOUT SECTION WITH FEATURE IMAGE
+=================================================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.about-image-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border: 3px solid var(--primary);
+    position: relative;
+    max-height: 380px;
+}
+
+.about-image-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image-card:hover img {
+    transform: scale(1.05);
+}
+
+.about-card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.about-card h4 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+/* ===================================================================
+   FEATURED MODULE CARDS (2x2 GRID)
+=================================================================== */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.featured-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: all 0.35s ease;
+}
+
+.featured-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 160, 0, 0.18);
+}
+
+.featured-img {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover .featured-img img {
+    transform: scale(1.08);
+}
+
+.featured-content {
+    padding: 30px;
+}
+
+.featured-content .badge-tag {
+    display: inline-block;
+    background: rgba(255, 160, 0, 0.15);
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.featured-content h3 {
+    font-family: var(--font-heading);
+    font-size: 23px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.featured-content ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.featured-content li {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+/* ===================================================================
+   SERVICES GRID (6-BOX FEATURES)
+=================================================================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border-radius: 14px;
+    padding: 35px 28px;
+    border: 1px solid var(--border-color);
+    transition: all 0.35s ease;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.service-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 160, 0, 0.18);
+}
+
+.service-card .icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 160, 0, 0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 32px;
+    color: var(--primary-dark);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .icon-box {
+    background: var(--primary);
+    color: #000000;
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+/* ===================================================================
+   CALLOUT BANNER
+=================================================================== */
+.callout-banner {
+    background: linear-gradient(135deg, rgba(12, 10, 9, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+    border-top: 4px solid var(--primary);
+    border-bottom: 4px solid var(--primary);
+}
+
+.callout-banner h2 {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.callout-banner p {
+    font-size: 18px;
+    color: var(--primary-light);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* ===================================================================
+   FAQ ACCORDION GRID
+=================================================================== */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+    padding: 28px;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.faq-item h4 {
+    font-family: var(--font-heading);
+    font-size: 19px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+/* ===================================================================
+   FOOTER
+=================================================================== */
+footer {
+    background-color: var(--dark-bg);
+    color: #aaaaaa;
+    padding: 60px 0 35px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 4px solid var(--primary);
+}
+
+footer a {
+    color: var(--primary-light);
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+.footer-credits {
+    margin-top: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* ===================================================================
+   RESPONSIVE DESIGN & MOBILE MENU TOGGLE
+=================================================================== */
+@media (max-width: 992px) {
+    .about-grid, .services-grid, .module-grid, .faq-grid, .counter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--dark-bg);
+        border-top: 1px solid rgba(255, 160, 0, 0.3);
+        border-bottom: 3px solid var(--primary);
+        padding: 15px 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-content h1 {
+        font-size: 30px;
+    }
+    .banner-content .subtitle {
+        font-size: 18px;
+    }
+}

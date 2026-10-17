@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Panchang – Daily Vedic Calendar, Choghadiya & Astro Guidance</title>
+    <meta name="description" content="High-Precision Vedic Calendar App. Accurate Tithi, Nakshatra, Choghadiya, Horas, and Vrats calculated in real-time.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- STICKY ONE-PAGE NAVIGATION HEADER -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home">Live<span>Panchang</span></a>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">☰</button>
+                <nav>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">Astro Engine</a></li>
+                        <li><a href="#features">5 Angas</a></li>
+                        <li><a href="#muhurats">Muhurats</a></li>
+                        <li><a href="#vrats">Vrats</a></li>
+                        <li><a href="#strengths">Key Advantages</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.rajmau.panchang" target="_blank" class="nav-download-btn">Download App</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER SECTION (FULL-WIDTH CELESTIAL BACKGROUND IMAGE) -->
+    <section id="home" class="fh5co-hero">
+        <div class="container">
+            <div class="banner-content">
+                <span class="hero-badge">✨ Real-Time Celestial Positioning Engine</span>
+                <h1>Live Panchang</h1>
+                <div class="subtitle">Daily Vedic Calendar, Choghadiya, Vrats & Astro Guidance</div>
+                <p class="tagline">High-Precision Astronomical Calculation Engine | Secured & Encrypted Local Data</p>
+                <div class="btn-group">
+                    <a href="https://play.google.com/store/apps/details?id=com.rajmau.panchang" target="_blank" class="btn btn-gold">📱 Download on Google Play</a>
+                    <a href="#about" class="btn btn-outline">✨ Explore Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENHANCED STAT COUNTER OVERLAY BAR -->
+    <section class="counter-bar">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <span class="counter-icon">🔒</span>
+                    <h3>100%</h3>
+                    <p>Offline & Encrypted Data</p>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-icon">🌙</span>
+                    <h3>30</h3>
+                    <p>Tithis & Transition Times</p>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-icon">✨</span>
+                    <h3>27</h3>
+                    <p>Nakshatras & Yogas</p>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-icon">🌐</span>
+                    <h3>6</h3>
+                    <p>Regional Languages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION (OUR ASTRONOMICAL COMPUTATION CONCEPT) -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="head-title">
+                <h2>Astronomical Precision</h2>
+                <div class="separator"></div>
+                <p>Location-Specific Celestial Longitudes Calculated for Your Geographic Position</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>The Eye of the Vedas (Drishya-Tulya Precision)</h3>
+                    <div class="separator-left"></div>
+                    <p>Traditional printed paper Panchangs are often calculated for a single city (like Ujjain or Varanasi) using ancient uncorrected tables. This creates a time discrepancy of <strong>1 to 2 hours</strong> in Tithi ending times for other locations.</p>
+                    <p>As stated in classical Jyotish Shastra: <em>"प्रत्यक्षशास्त्रं साचितारुनेत्रम्"</em> (Astronomy is the visible eye of the Vedas). Live Panchang calculates real-time planetary longitudes using our <strong>High-Precision Celestial Positioning Model (Chitrapaksha / Lahiri Ayanamsha)</strong> accurate to fractions of a second for your exact GPS latitude and longitude.</p>
+                </div>
+
+                <div class="about-image-card">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80" alt="Vedic Observatory Architecture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 ANGAS (FEATURED MODULE CARDS WITH UNSPLASH IMAGES) -->
+    <section id="features" class="section-padding section-gray">
+        <div class="container">
+            <div class="head-title">
+                <h2>The Five Limbs of Time (Panchanga)</h2>
+                <div class="separator"></div>
+                <p>High-Precision Real-Time Calculations for Every Vedic Element</p>
+            </div>
+
+            <div class="module-grid">
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="https://images.unsplash.com/photo-1532693322450-2cb5c511067d?auto=format&fit=crop&w=800&q=80" alt="Tithi Moon Phases & Sun Ecliptic">
+                    </div>
+                    <div class="featured-content">
+                        <span class="badge-tag">Pillar 1</span>
+                        <h3>1. Tithi (Lunar Day)</h3>
+                        <p>Calculated from the 12-degree longitudinal difference between Sun and Moon. 30 Tithis per lunar month divided into Shukla Paksha and Krishna Paksha with exact start and end timestamps.</p>
+                        <ul>
+                            <li>Evaluates Udaya Tithi (Sunrise prevalence)</li>
+                            <li>Displays exact transition time to next Tithi</li>
+                            <li>Sun & Moon Rashi indicators</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=80" alt="Golden Horizon Sunrise Vara">
+                    </div>
+                    <div class="featured-content">
+                        <span class="badge-tag">Pillar 2</span>
+                        <h3>2. Vara (Solar Weekday)</h3>
+                        <p>The solar day governed by planetary lords. In Vedic time, Vara begins strictly at local Surya Udaya (Sunrise) and lasts until the next day's Sunrise (Udayat-Udayam).</p>
+                        <ul>
+                            <li>Sunrise to Sunrise Vedic day boundary</li>
+                            <li>Determines Day Lord for Horas & Choghadiya</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=800&q=80" alt="Zodiac Constellations Nakshatra">
+                    </div>
+                    <div class="featured-content">
+                        <span class="badge-tag">Pillar 3</span>
+                        <h3>3. Nakshatra (Lunar Mansion)</h3>
+                        <p>The 360-degree zodiac ecliptic path divided into 27 constellations of 13° 20' each. Live Panchang provides the active Nakshatra, its Pada (quarter), and exact transition moment.</p>
+                        <ul>
+                            <li>27 Nakshatras with Pada details</li>
+                            <li>Essential for birth stars & muhurats</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=800&q=80" alt="Sun and Moon Celestial Alignment Yoga and Karana">
+                    </div>
+                    <div class="featured-content">
+                        <span class="badge-tag">Pillar 4 & 5</span>
+                        <h3>4 & 5. Yoga & Karana</h3>
+                        <p>Yoga is the angular sum of solar and lunar ecliptic longitudes (27 Yogas from Vishkambha to Vaidhriti). Karana is half of a Tithi (6 degrees separation, 60 Karanas per month).</p>
+                        <ul>
+                            <li>Major inauspicious Yogas highlighted</li>
+                            <li>Vishti Karana explicitly flagged as Bhadra</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUSPICIOUS MUHURATS SECTION -->
+    <section id="muhurats" class="section-padding">
+        <div class="container">
+            <div class="head-title">
+                <h2>Auspicious Timings & Muhurat Finder</h2>
+                <div class="separator"></div>
+                <p>Plan Your Worship, Travel, Ceremonies, and Business Endeavors with Confidence</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">⏱️</div>
+                    <h3>Choghadiya Timings</h3>
+                    <p>Divides local daytime and nighttime into 8 equal segments (Amrit, Shubh, Labh, Char, Udveg, Kaal, Rog) ordered dynamically by Weekday Lord.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🪐</div>
+                    <h3>24-Hour Planetary Horas</h3>
+                    <p>Planetary hours ruled by Sun, Moon, Mars, Mercury, Jupiter, Venus, and Saturn starting from local Sunrise Lord.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🪔</div>
+                    <h3>Gowri Panchangam</h3>
+                    <p>Traditional timing system classifying periods into Amirtham, Udhi, Laabam, Dhanam, Sugam, Soray, Visham, and Kaalam.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🌟</div>
+                    <h3>Abhijit Muhurat</h3>
+                    <p>The 8th Muhurat of the day (midpoint between local Sunrise and Sunset). Celebrated as supreme for destroying thousands of doshas.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🚫</div>
+                    <h3>Rahu Kalam & Inauspicious Kaals</h3>
+                    <p>Accurate 1/8th day boundaries for Rahu Kalam, Yamaganda, and Gulika Kaal based on exact local horizon sun position.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">⚡</div>
+                    <h3>Vishti (Bhadra) Karana</h3>
+                    <p>Displays Vishti (Bhadra) Karana active timing during which auspicious ceremonies are postponed until favorable hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VRATS & FESTIVALS SECTION -->
+    <section id="vrats" class="section-padding section-gray">
+        <div class="container">
+            <div class="head-title">
+                <h2>Shastric Fasting (Vrat) & Festival Rules</h2>
+                <div class="separator"></div>
+                <p>Calculated Following Nirnaya-Sindhu & Dharma-Sindhu Kala-Vyapti Prevalence Rules</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <h4>🌸 Suddha Ekadashi Fasting Purity</h4>
+                    <p>Evaluates pre-dawn Arunodaya (4 Ghatis / 96 mins before Sunrise) to ensure Dashami does not overlap Arunodaya (Dashami-Viddha Ekadashi is discarded). Recommends pure Suddha Ekadashi for Smartha and Vaishnava fasting.</p>
+                </div>
+
+                <div class="about-card">
+                    <h4>🔱 Evening & Midnight Vrats</h4>
+                    <p>Requires Trayodashi Tithi to be active during evening Pradosha Kaal (Sunset + 2 hrs 24 mins) for Pradosh Vrat, Nishita Kaal (Midnight) for Shivratri & Janmashtami, and Moonrise for Sankashti Chaturthi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY ADVANTAGES SECTION -->
+    <section id="strengths" class="section-padding">
+        <div class="container">
+            <div class="head-title">
+                <h2>Key Application Advantages</h2>
+                <div class="separator"></div>
+                <p>Designed to Deliver Seamless Convenience and Celestial Clarity</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">📍</div>
+                    <h3>Location-Aware Convenience</h3>
+                    <p>Automatically adjusts calculations to your exact GPS city coordinates anywhere in the world.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🔔</div>
+                    <h3>Smart Vrat Reminders</h3>
+                    <p>Set custom notification alerts for upcoming Ekadashi, Pradosh, Chaturthi, and festival days.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🌐</div>
+                    <h3>6 Regional Languages</h3>
+                    <p>Full localization across English, Hindi (हिंदी), Marathi (मराठी), Kannada (ಕನ್ನಡ), Tamil (தமிழ்), and Telugu (తెలుగు).</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">📱</div>
+                    <h3>Home Screen Widget</h3>
+                    <p>Glance AppWidget provides at-a-glance access to daily Tithi and Nakshatra directly from your phone screen.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">📖</div>
+                    <h3>Panchang Educational Guide</h3>
+                    <p>Comprehensive glossary explaining Tithi transitions, Rahu Kalam significance, and astrological principles.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">📡</div>
+                    <h3>100% Offline Access</h3>
+                    <p>All core astronomical calculations run locally on device without requiring internet connectivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALLOUT BANNER -->
+    <section class="callout-banner">
+        <div class="container">
+            <h2>Experience True Vedic Time Precision Today</h2>
+            <p>Download Live Panchang on Android & Bring High-Precision Astrological Guidance Into Your Life</p>
+            <a href="https://play.google.com/store/apps/details?id=com.rajmau.panchang" target="_blank" class="btn btn-gold" style="font-size: 18px; padding: 16px 42px;">📱 Download Live Panchang on Google Play</a>
+        </div>
+    </section>
+
+    <!-- PRIVACY POLICY SECTION -->
+    <section id="privacy" class="section-padding section-gray">
+        <div class="container">
+            <div class="head-title">
+                <h2>Privacy Policy & Data Security</h2>
+                <div class="separator"></div>
+                <p>Transparent Privacy Principles & Secured Data Protection</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">🔒</div>
+                    <h3>Encrypted Local Storage</h3>
+                    <p>Live Panchang stores user preferences (language, calendar system, location, Vrat reminders) locally on your device in encrypted and secured database storage.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">📍</div>
+                    <h3>Location Usage</h3>
+                    <p>GPS location coordinates are accessed solely on-device to compute exact local horizon Sunrise, Sunset, and Tithi times for your city. Your location data is never shared or sold.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🛡️</div>
+                    <h3>No Ad Profiling</h3>
+                    <p>Live Panchang does not collect advertising identifiers or track your personal activities across third-party apps or websites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="head-title">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                <div class="separator"></div>
+                <p>Answers to Common Queries regarding Panchang Calculations and App Features</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Q1: Why do Tithi timings in Live Panchang differ slightly in different cities?</h4>
+                    <p>Because Live Panchang calculates real-time planetary longitudes and Sunrise times based on your exact city's longitude and latitude for maximum personal accuracy.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q2: Does the Live Panchang app work without internet?</h4>
+                    <p>Yes! Core Panchang calculations, Choghadiya, Horas, and Vrat lists work offline on your device without requiring mobile data or Wi-Fi.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q3: How do I switch between Amanta and Purnimanta calendar modes?</h4>
+                    <p>Open App Settings → Calendar System → Select either Amanta (Month ends on Amavasya) or Purnimanta (Month ends on Purnima).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q4: Is my personal data secured?</h4>
+                    <p>Absolutely. Live Panchang keeps user data encrypted and secured locally on your device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD SECTION -->
+    <section id="download" class="section-padding section-gray" style="text-align: center;">
+        <div class="container">
+            <div class="head-title">
+                <h2>Download Live Panchang on Android</h2>
+                <div class="separator"></div>
+                <p>Available on Google Play Store with 6 Regional Languages Support</p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.rajmau.panchang" target="_blank" class="btn btn-gold" style="font-size: 18px; padding: 18px 45px;">📱 Download Live Panchang on Google Play</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Copyright © 2026 Live Panchang. All Rights Reserved by Rajmau App Studio.</p>
+            <p style="color: #ffffff; font-weight: 600; margin-top: 10px;">Powered by High-Precision Real-Time Astronomical Calculation Engine</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR MOBILE MENU TOGGLE & SCROLL SPY -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById("mobile-toggle-btn");
+            const navMenu = document.getElementById("nav-menu");
+
+            if (toggleBtn && navMenu) {
+                toggleBtn.addEventListener("click", function () {
+                    navMenu.classList.toggle("active");
+                });
+
+                const links = navMenu.querySelectorAll("a");
+                links.forEach(link => {
+                    link.addEventListener("click", function () {
+                        navMenu.classList.remove("active");
+                    });
+                });
+            }
+
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll("#nav-menu a[href^='#']");
+
+            window.addEventListener("scroll", function () {
+                let current = "";
+                const scrollY = window.pageYOffset;
+
+                sections.forEach(section => {
+                    const sectionHeight = section.offsetHeight;
+                    const sectionTop = section.offsetTop - 100;
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === "#" + current) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
